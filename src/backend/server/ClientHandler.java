@@ -56,8 +56,8 @@ public class ClientHandler implements Runnable {
                     if (clientMsg.equalsIgnoreCase("EXIT")) {
                         break;
                     }
-                    String[] clientMsgInArray = new String[3];
-                    clientMsgInArray = clientMsg.split(" ", 3);
+                    String[] clientMsgInArray = clientMsg.split(" ", 3);
+
                     if (clientMsgInArray[0].equalsIgnoreCase("/w")) {
                         server.sendMsgToAClient(clientMsgInArray[1],clientMsgInArray[2]);
                     } else{
